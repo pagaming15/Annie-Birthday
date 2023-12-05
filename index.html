@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday My World</title>
+    <link rel="stylesheet" href="Styles.css" />
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+  <body>
+    <section id="note">
+      <img src="Kitten.png" alt="Kitten" />
+      <audio
+        id="song"
+        src="14.Taylor Swift - Call it What You Want.mp3"
+      ></audio>
+      <div id="volume-slider" style="display: none">
+        <input
+          type="range"
+          id="volume-control"
+          min="0"
+          max="1"
+          step="0.01"
+          value="1"
+        />
+      </div>
+
+      <img src="Note.jpg" alt="Note" />
+    </section>
+
+    <script>
+      const Kitten = document.querySelector("#note img[src='Kitten.png']");
+      const audio = document.getElementById("song");
+      const volumeSlider = document.getElementById("volume-slider");
+
+      Kitten.addEventListener("click", function () {
+        if (audio.paused) {
+          audio.play();
+        } else {
+          audio.pause();
+        }
+
+        // Toggle the visibility of the volume slider
+        if (volumeSlider.style.display === "none") {
+          volumeSlider.style.display = "block";
+        } else {
+          volumeSlider.style.display = "none";
+        }
+      });
+
+      // Update the audio volume based on the slider value
+      const volumeControl = document.getElementById("volume-control");
+      volumeControl.addEventListener("input", function () {
+        audio.volume = volumeControl.value;
+      });
+    </script>
+    <div id="text">
+      <div id="text-container">
+        <h4>
+          ببین آنی واقعا نمی‌دونم چی بگم ولی تولدته می‌خوام تبریک بگم و باهات
+          حرف بزنم آنی من تورو کامل نمیشناسم ولی تمامه اون لحظاتی که باهم آشنا
+          شدیم ماینکرفت پلی دادیم تا صبح بیدار موندیم با بچه ها بازی میکردیم
+          می‌خندیدیم،تاکسیک بازی،حرفا نجاد پرستی،موسیقی،درد،ناراحتی،گریه،چقدر دل
+          داریت میدادم ساعت ها دنباله یه گیم بودم باهم پلی بدیم،دنباله ایده بودم
+          حوصلت سر نره،نمیخواستم ناراحت بشی،تا صبح بیدار موندن،اینستا،شیت پیت
+          فرستادن،تو ویس خوابیدن و آشنا شدن با بچه ها دیگه که همش به لطفه توعه
+          تو تو شرایطی که شدیدا تنها شده بودم پیشم موندی بهم اهمیت می‌دادی من
+          خیلی خوشحال بودم و دوست داشتم برا همیشه دوست بمونیم اما ترس داشتم ترس
+          اینکه بری و دیگه بهم اهمیت ندی و سرد شی و ازم خستت شه و کلا دیگه باهم
+          راحت نباشی.... ولی انگار شده یا شایدم یه کارایی کردی که نمیدونی من شده
+          شب ها بیدار موندم و گریه کردم بفهمم چرا باهم سرد شدی ولی بهرحال آدم از
+          آدم خستش میشه شادم تغییراتی که داشتمو دوست نداشتی یا شایدم یه کار کردم
+          ناراحت شدی... اره خلاصه من میخواستم بهترین دوست باشی و باهم و خیلیا
+          دیگه ساعت ها حرف بزنیم و.... درکت میکنم درس داری باید پیشه کسایه دیگه
+          باشی ولی میدونم خیلی ریز خیلیییی کم بهم فکر میکنی و دلت برا اون روزا
+          تنگ میشه شاید فقط ۴ماه گذشته از دوستیمون ولی خیلیه برا من امیدوارم
+          داری این پیامو میخونی بهترین روزت باشه شاید منو دیگه نبینی به قدری
+          حالم بده شاید اینترنتو ول کنم ولی ول کنم تنها میشم بهرحال این یه
+          یادگاریه با حرفایی که تو دلم بود امید وارم همیشه تو زندگیت خوشحال باشی
+          و موفق بشیو به چیزایی که میخوای برسی تولدت مبارک احمق ترین دختر دنیا
+        </h4>
+      </div>
+    </div>
+
+    <footer id="footer">
+      <img src="Heart.png" alt="Heart" />
+      <img src="Text.png" alt="Text" />
+      <img src="Heart.png" alt="Heart" />
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+/*Responsive Styles */
+
+@media (max-width: 850px) {
+  #banner {
+    display: flex;
+    justify-content: center;
+  }
+
+  #banner img {
+    width: 99vw;
+  }
+
+  #note {
+    margin-top: 20vw;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 22vw;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #note img {
+    width: 80vw;
+  }
+
+  #note img:first-child {
+    width: 18vw;
+    cursor: pointer;
+  }
+
+  #text {
+    margin-bottom: 11vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+  }
+
+  #text-container {
+    padding-left: 20vw;
+    padding-right: 20vw;
+  }
+
+  h4 {
+    color: white;
+    font-size: 5vw;
+    background-color: rgba(204, 0, 255, 0.388);
+    padding: 3vw;
+  }
+
+  #volume-slider {
+    position: absolute;
+    top: 39.5vw;
+  }
+
+  #footer {
+    background-color: rgb(211, 164, 255);
+    width: 100%;
+    height: 4vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 10vh;
+  }
+
+  #footer img {
+    margin: 2vw;
+    width: 7vw;
+  }
+
+  #footer img:nth-child(2) {
+    margin: 0;
+    width: 73vw;
+  }
+}
